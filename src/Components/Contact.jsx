@@ -1,54 +1,52 @@
-import { useState } from "react"
+import { GlobalStates } from "../Context"
 
 const Contact = () => {
 
-    const [ state, setState ] = useState({
-        number: "", address: "", email: "", website: ""
-    })
+    const { bio, getInput } = GlobalStates()
 
     return (
         <div id="Contact">
 
             <div>
                 <input 
-                    value={state.email} 
+                    value={bio.email} 
                     type="email" 
                     name="email"
                     placeholder="Your Email Address"
-                    onChange={(e)=>setState({ ...state, [e.target.name]: e.target.value })}
+                    onChange={(e)=>getInput(e)}
                     className="border border-black"
                 />
             </div>
 
             <div>
                 <input 
-                    value={state.number} 
+                    value={bio.number} 
                     type="tel" 
                     name="number" 
                     placeholder="Mobile Number"
-                    onChange={(e)=>setState({ ...state, [e.target.name]: e.target.value })}
+                    onChange={(e)=>getInput(e)}
                     className="border border-black"
                 />
             </div>
 
             <div>
                 <input 
-                    value={state.address} 
+                    value={bio.address} 
                     type="text" 
                     name="address"
                     placeholder="Your Address"
-                    onChange={(e)=>setState({ ...state, [e.target.name]: e.target.value })}
+                    onChange={(e)=>getInput(e)}
                     className="border border-black"
                 />
             </div>
 
             <div>
                 <input 
-                    value={state.website} 
+                    value={bio.website} 
                     type="text" 
                     name="website" 
                     placeholder="Personal Website/ Blog"
-                    onChange={(e)=>setState({ ...state, [e.target.name]: e.target.value })}
+                    onChange={(e)=>getInput(e)}
                     className="border border-black"
                 />
             </div>

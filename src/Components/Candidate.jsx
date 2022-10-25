@@ -1,32 +1,30 @@
-import { useState } from "react"
+import { GlobalStates } from "../Context"
 
 const Candidate = () => {
 
-    const [ state, setState ] = useState({
-        candidateName: "", currentStatus: ""
-    })
+    const { bio, getInput } = GlobalStates()
 
     return (
         <div id="Candidate">
 
             <div>
                 <input 
-                    value={state.candidateName} 
+                    value={bio.candidateName} 
                     type="text" 
                     name="candidateName"
                     placeholder="Your Full Name"
-                    onChange={(e)=>setState({ ...state, [e.target.name]: e.target.value })}
+                    onChange={(e)=>getInput(e)}
                     className="border border-black"
                 />
             </div>
 
             <div>
                 <input 
-                    value={state.currentStatus} 
+                    value={bio.currentStatus} 
                     type="text" 
                     name="currentStatus" 
                     placeholder="Current Status"
-                    onChange={(e)=>setState({ ...state, [e.target.name]: e.target.value })}
+                    onChange={(e)=>getInput(e)}
                     className="border border-black"
                 />
             </div>

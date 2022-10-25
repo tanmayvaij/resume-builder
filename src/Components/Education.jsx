@@ -1,6 +1,9 @@
 import { useState } from "react"
+import { GlobalStates } from "../Context"
 
 const Education = () => {
+
+    const { bio } = GlobalStates()
 
     const [ state, setState ] = useState({
         institute: "", 

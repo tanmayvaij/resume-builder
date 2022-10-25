@@ -1,8 +1,11 @@
 import { useState } from "react"
+import { GlobalStates } from "../Context"
 
 const Skills = () => {
 
     const [ state, setState ] = useState("")
+
+    const { bio } = GlobalStates()
 
     return (
         <div id="Skills">

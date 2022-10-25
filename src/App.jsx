@@ -1,18 +1,17 @@
-import Summary from "./Components/Summary"
-import Candidate from "./Components/Candidate"
-import Contact from "./Components/Contact"
-import Education from "./Components/Education"
-import Skills from "./Components/Skills"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Navbar from "./Components/Navbar"
+import Builder from "./Pages/Builder"
+import Resume from "./Pages/Resume"
 
 const App = () => {
     return (
-        <div id="App">
-            <Candidate/>
-            <Summary/>
-            <Contact/>
-            <Education/>
-            <Skills/>
-        </div>
+        <BrowserRouter>
+            <Navbar/>
+            <Routes>
+                <Route exact path="/" element={<Builder/>} />
+                <Route exact path="/resume" element={<Resume/>} />
+            </Routes>
+        </BrowserRouter>
     )
 }
 

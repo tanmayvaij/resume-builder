@@ -1,8 +1,8 @@
-import { useState } from "react"
+import { GlobalStates } from "../Context"
 
 const Summary = () => {
 
-    const [ summary, setSummary ] = useState("")
+    const { bio, getInput } = GlobalStates()
 
     return (
         <div id="About">
@@ -11,8 +11,8 @@ const Summary = () => {
                 cols="30" 
                 rows="10"
                 placeholder="Your Summary"
-                value={summary}
-                onChange={(e)=>setSummary(e.target.value)}
+                value={bio.summary}
+                onChange={(e)=>getInput(e)}
                 className="border border-black"
             ></textarea>
         </div>

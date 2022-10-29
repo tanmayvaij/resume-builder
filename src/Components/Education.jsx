@@ -3,7 +3,7 @@ import { GlobalStates } from "../Context"
 
 const Education = () => {
 
-    const { bio } = GlobalStates()
+    const { bio: { education }, bio, setBio } = GlobalStates()
 
     const [ state, setState ] = useState({
         institute: "", 
@@ -12,6 +12,17 @@ const Education = () => {
         startYear: "",
         endYear: "" 
     })
+
+    const addEducation = () => {
+        setBio({ ...bio, education: [...education, state] })
+        setState({
+            institute: "", 
+            degree: "", 
+            specialization: "",
+            startYear: "",
+            endYear: "" 
+        })
+    }
 
     return(
         <div id="Education">
@@ -70,6 +81,10 @@ const Education = () => {
                     className="border border-black"
                 />
             </div>
+
+            <button onClick={addEducation}>
+                Add
+            </button>
 
         </div>
     )

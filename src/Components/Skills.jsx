@@ -5,7 +5,12 @@ const Skills = () => {
 
     const [ state, setState ] = useState("")
 
-    const { bio } = GlobalStates()
+    const { bio: { skills }, bio, setBio } = GlobalStates()
+
+    const addSkill = () => {
+        setBio({ ...bio, skills: [...skills, state] })
+        setState("")
+    }
 
     return (
         <div id="Skills">
@@ -19,6 +24,7 @@ const Skills = () => {
                     className="border border-black"
                 />
             </div>
+            <button onClick={addSkill}>Add</button>
         </div>
     )
 }

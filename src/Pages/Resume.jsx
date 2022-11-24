@@ -5,47 +5,60 @@ const Resume = () => {
     const { bio } = GlobalStates()
 
     return (
-        <div id="Resume" className="flex items-center justify-center">
-            <div className="border w-[50rem] p-14">
-                <div className="">
-                    <h1 className="text-3xl">{bio.candidateName}</h1>
-                    <h3>{bio.currentStatus}</h3>
+        <div id="Resume" className="">
+
+            <div>
+                <h1>Tanmay Vaij</h1>
+                <p>Pune/Pimpri-Chinchwad Area</p>
+            </div>
+
+            <div>
+
+                <div>
+                    <span>tanmayvaij22@gmail.com</span>
+                    <span>8408882079</span>
                 </div>
-                <div className="w-[40rem] mt-4">
-                    <div className="flex justify-between">
-                        <h4>{bio.email}</h4>
-                        <h4>{bio.number}</h4>
-                    </div>
-                    <div className="flex justify-between">
-                        <h4>{bio.address}</h4>
-                        <h4>{bio.website}</h4>
-                    </div>
+
+                <div>
+                    <span>linkedin.com/in/tanmayvaij</span>
+                    <span>https://tanmayvaij.github.io</span>
                 </div>
-                <div className="mt-4">
-                    <h2 className="text-xl font-medium">Summary</h2>
-                    <p className="">{bio.summary}</p>
-                </div>
-                <div className="mt-4">
-                    <h2 className="text-xl font-medium">Education</h2>
-                    <div>
-                        {
-                            bio.education.map((val)=> {
-                                return (
-                                    <div>
-                                        <h4>{val.institute}</h4>
-                                        <p>{val.degree}</p>
-                                        <p>
-                                            <span>{val.startYear}</span>
-                                            - 
-                                            <span>{val.endYear}</span> 
-                                        </p>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
+
+            </div>
+
+            <div>
+                <h2>Summary</h2>
+                <p>
+                    Strong in design and integration with intuitive problem-solving skills. 
+                    Proficient in JAVA, PYTHON, JAVASCRIPT, and MONGODB. Passionate about 
+                    implementing and launching new projects. Ability to translate business 
+                    requirements into technical solutions. Looking to start the career as Full 
+                    Stack Intern with a reputed firm driven by technology.
+                </p>
+            </div>
+
+            <div>
+                <h2>Education</h2>
+                <div>
+                    <h3>DY Patil International University</h3>
+                    <p>Bachelor of Computer Application, Mobile Application and Web Technology</p>
+                    <p>Oct 2021 - 2024</p>
                 </div>
             </div>
+
+            <div>
+                <h2>Skills</h2>
+                <ul>
+                    <li>Cascading Style Sheets (CSS)</li>
+                    <li>MERN Stack</li>
+                    <li>Python (Programming Language)</li>
+                    <li>RDBMS</li>
+                    <li>Java</li>
+                    <li>Dart</li>
+                    <li>Digital Marketing</li>
+                </ul>
+            </div>
+
         </div>
     )
 }

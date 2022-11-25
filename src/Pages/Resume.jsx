@@ -9,19 +9,21 @@ const Resume = () => {
 
             <div>
 
-                <div>
+                <div className="text-center">
                     <h1 className="text-medium text-3xl">Tanmay Vaij</h1>
-                    <p className="text-sm">Pune/Pimpri-Chinchwad Area</p>
+                    <p className="text-sm mt-1">Pune/Pimpri-Chinchwad Area</p>
                 </div>
 
-                <div className="text-sm font-medium my-4">
+                <div className="text-center text-sm font-medium my-4">
 
-                    <div className="flex flex-col justify-between">
+                    <div className="flex space-y-1 flex-col justify-between">
+                        <span></span>
                         <span>tanmayvaij22@gmail.com</span>
                         <span>8408882079</span>
                     </div>
 
-                    <div className="flex flex-col justify-between">
+                    <div className="flex space-y-1 flex-col justify-between">
+                        <span></span>
                         <span>linkedin.com/in/tanmayvaij</span>
                         <span>https://tanmayvaij.github.io</span>
                     </div>
@@ -31,7 +33,7 @@ const Resume = () => {
                 <hr />
 
                 <div className="my-4">
-                    <h2 className="font-bold text-xl">Summary</h2>
+                    <h2 className="text-center my-3 font-bold text-xl">Summary</h2>
                     <p className="text-sm">
                         Strong in design and integration with intuitive problem-solving skills. 
                         Proficient in JAVA, PYTHON, JAVASCRIPT, and MONGODB. Passionate about 
@@ -44,7 +46,7 @@ const Resume = () => {
                 <hr />
 
                 <div className="my-4">
-                    <h2 className="font-bold text-xl">Education</h2>
+                    <h2 className="text-center my-3 font-bold text-xl">Education</h2>
                     <div>
                         <h3 className="font-medium">DY Patil International University</h3>
                         <p className="font-light">Bachelor of Computer Application, Mobile Application and Web Technology</p>
@@ -54,9 +56,9 @@ const Resume = () => {
 
                 <hr />
 
-                <div className="my-4">
-                    <h2 className="font-bold text-xl">Skills</h2>
-                    <ul className="ml-5 text-sm list-disc">
+                <div className="my-4 text-center">
+                    <h2 className="font-bold text-xl my-3">Skills</h2>
+                    <ul className="text-sm ">
                         <li>Cascading Style Sheets (CSS)</li>
                         <li>MERN Stack</li>
                         <li>Python (Programming Language)</li>
